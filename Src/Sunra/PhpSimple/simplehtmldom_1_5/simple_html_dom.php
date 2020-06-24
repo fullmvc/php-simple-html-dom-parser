@@ -1386,7 +1386,7 @@ class simple_html_dom
 		? "/^[-:\w]+$/"
 		: "/^[\w-:]+$/"
 	;
-        if (!preg_match($patter, $tag)) {
+        if (!preg_match($pattern, $tag)) {
             $node->_[HDOM_INFO_TEXT] = '<' . $tag . $this->copy_until('<>');
             if ($this->char==='<') {
                 $this->link_nodes($node, false);
